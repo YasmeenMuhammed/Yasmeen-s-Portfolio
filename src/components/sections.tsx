@@ -376,17 +376,17 @@ export function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.7, ease, delay: i * 0.05 }}
-                  className={`relative grid grid-cols-[2rem_1fr] gap-6 md:grid-cols-2 md:gap-12 ${i % 2 === 0 ? "" : "md:[&>*:first-child]:order-2"
+                  className={`relative pl-10 md:grid md:grid-cols-2 md:gap-12 md:pl-0 ${i % 2 === 0 ? "" : "md:[&>*:first-child]:order-2"
                     }`}
                 >
                   <div className="absolute left-3 top-2 h-3 w-3 -translate-x-1/2 rounded-full bg-[#9d7bd6] shadow-[0_0_20px_4px_rgba(157,123,214,0.6)] md:left-1/2" />
-                  <div className={`pl-8 md:pl-0 ${i % 2 === 0 ? "md:text-right md:pr-10" : "md:pl-10"}`}>
-                    <div className="text-xs uppercase tracking-[0.25em] text-[#9d7bd6]">{t.year}</div>
-                    <h4 className="mt-2 font-display text-2xl text-[#f5ecd9]">{t.title}</h4>
+                  <div className={`mt-3 md:mt-0 ${i % 2 === 0 ? "md:pl-10" : "md:text-right md:pr-10"
+                    }`}>                    <div className="text-xs uppercase tracking-[0.25em] text-[#9d7bd6]">{t.year}</div>
+                    <h4 className="mt-2 font-display text-xl md:text-2xl text-[#f5ecd9]">{t.title}</h4>
                     <div className="text-sm text-[#e9dcc4]/60">{t.place}</div>
                   </div>
                   <div className={`pl-8 md:pl-0 ${i % 2 === 0 ? "md:pl-10" : "md:text-right md:pr-10"}`}>
-                    <p className="text-[#e9dcc4]/75">{t.desc}</p>
+                    <p className="text-sm md:text-base leading-relaxed text-[#e9dcc4]/75">{t.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -433,8 +433,8 @@ export function Projects() {
                 key={c}
                 onClick={() => setCat(c)}
                 className={`relative rounded-full px-4 py-2 text-xs transition ${cat === c
-                    ? "text-[#1a1612]"
-                    : "text-[#e9dcc4]/70 hover:text-[#f5ecd9]"
+                  ? "text-[#1a1612]"
+                  : "text-[#e9dcc4]/70 hover:text-[#f5ecd9]"
                   }`}
               >
                 {cat === c && (
